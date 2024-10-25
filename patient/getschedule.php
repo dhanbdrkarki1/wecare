@@ -1,6 +1,8 @@
 <?php
 session_start();
 include_once '../conn/dbconnect.php';
+// base URL for the S3 bucket
+include_once '../conn/static_source.php';
 $q = $_GET['q'];
 $res = mysqli_query($con,"SELECT * FROM doctorschedule WHERE scheduleDate='$q'");
 if (!$res) {
@@ -10,7 +12,7 @@ die("Error running $sql: " . mysqli_error());
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo $patient_static_file; ?>/assets/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <?php

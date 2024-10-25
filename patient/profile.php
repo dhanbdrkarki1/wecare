@@ -2,6 +2,8 @@
 session_start();
 // include_once '../connection/server.php';
 include_once '../conn/dbconnect.php';
+// base URL for the S3 bucket
+include_once '../conn/static_source.php';
 if(!isset($_SESSION['patientSession']))
 {
 header("Location: ../index.php");
@@ -62,17 +64,17 @@ $widowed = "checked";
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>Patient Dashboard</title>
 		<!-- Bootstrap -->
-		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="assets/css/default/style.css" rel="stylesheet">
-		<!-- <link href="assets/css/default/style1.css" rel="stylesheet"> -->
-		<link href="assets/css/default/blocks.css" rel="stylesheet">
-		<link href="assets/css/date/bootstrap-datepicker.css" rel="stylesheet">
-		<link href="assets/css/date/bootstrap-datepicker3.css" rel="stylesheet">
+		<link href="<?php echo $patient_static_file; ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="<?php echo $patient_static_file; ?>/assets/css/default/style.css" rel="stylesheet">
+		<!-- <link href="<?php echo $patient_static_file; ?>/assets/css/default/style1.css" rel="stylesheet"> -->
+		<link href="<?php echo $patient_static_file; ?>/assets/css/default/blocks.css" rel="stylesheet">
+		<link href="<?php echo $patient_static_file; ?>/assets/css/date/bootstrap-datepicker.css" rel="stylesheet">
+		<link href="<?php echo $patient_static_file; ?>/assets/css/date/bootstrap-datepicker3.css" rel="stylesheet">
 		<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
 		<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 		<!--Font Awesome (added because you use icons in your prepend/append)-->
 		<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
-		<!-- <link href="assets/css/material.css" rel="stylesheet"> -->
+		<!-- <link href="<?php echo $patient_static_file; ?>/assets/css/material.css" rel="stylesheet"> -->
 	</head>
 	<body>
 		
@@ -87,7 +89,7 @@ $widowed = "checked";
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="patient.php"><img alt="Brand" src="assets/img/logo.png" height="40px"></a>
+					<a class="navbar-brand" href="patient.php"><img alt="Brand" src="<?php echo $patient_static_file; ?>/assets/img/logo.png" height="40px"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -130,7 +132,7 @@ $widowed = "checked";
 						<div class="col-md-3 col-sm-3">
 							
 							<div class="user-wrapper">
-								<img src="assets/img/1.jpg" class="img-responsive" />
+								<img src="<?php echo $patient_static_file; ?>/assets/img/1.jpg" class="img-responsive" />
 								<div class="description">
 									<h4><?php echo $userRow['patientFirstName']; ?> <?php echo $userRow['patientLastName']; ?></h4>
 									<h5> <strong> Website Designer </strong></h5>
@@ -315,8 +317,8 @@ $widowed = "checked";
 				<!-- SECTION END -->
 			</div>
 			<!-- CONATINER END -->
-			<script src="assets/js/jquery.js"></script>
-			<script src="assets/js/bootstrap.min.js"></script>
+			<script src="<?php echo $patient_static_file; ?>/assets/js/jquery.js"></script>
+			<script src="<?php echo $patient_static_file; ?>/assets/js/bootstrap.min.js"></script>
 			
 			<script type="text/javascript">
 														$(function () {

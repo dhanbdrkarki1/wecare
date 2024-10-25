@@ -24,12 +24,12 @@ $res=mysqli_query($con, "SELECT a.*, b.*,c.* FROM patient a
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>Make Appoinment</title>
-		<!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
-		<link href="assets/css/material.css" rel="stylesheet">
+		<!-- <link href="<?php echo $patient_static_file; ?>/assets/css/bootstrap.min.css" rel="stylesheet"> -->
+		<link href="<?php echo $patient_static_file; ?>/assets/css/material.css" rel="stylesheet">
 		
-		<link href="assets/css/default/style.css" rel="stylesheet">
-		<link href="assets/css/default/blocks.css" rcel="stylesheet">
-		<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" />
+		<link href="<?php echo $patient_static_file; ?>/assets/css/default/style.css" rel="stylesheet">
+		<link href="<?php echo $patient_static_file; ?>/assets/css/default/blocks.css" rcel="stylesheet">
+        <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
 
 	</head>
 	<body>
@@ -44,7 +44,7 @@ $res=mysqli_query($con, "SELECT a.*, b.*,c.* FROM patient a
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="patient.php"><img alt="Brand" src="assets/img/logo.png" height="40px"></a>
+					<a class="navbar-brand" href="patient.php"><img alt="Brand" src="<?php echo $patient_static_file; ?>/assets/img/logo.png" height="40px"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -138,7 +138,7 @@ echo "</table>";
 </div>
 </div>
 <!-- display appoinment end -->
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="<?php echo $patient_static_file; ?>/assets/js/jquery.js"></script>
+<script src="<?php echo $patient_static_file; ?>/assets/js/bootstrap.min.js"></script>
 </body>
 </html>

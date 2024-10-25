@@ -4,6 +4,8 @@ session_destroy();
 session_unset();
 // include_once '../connection/server.php';
 include_once '../conn/dbconnect.php';
+// base URL for the S3 bucket
+include_once '../conn/static_source.php';
 if(!isset($_SESSION['patientSession']))
 {
 header("Location: ../index.php");
@@ -23,14 +25,14 @@ echo mysql_error();
         <meta name="author" content="">
         <title>Patient Dashboard</title>
         <!-- Bootstrap Core CSS -->
-        <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
-        <link href="assets/css/material.css" rel="stylesheet">
+        <!-- <link href="<?php echo $patient_static_file; ?>/assets/css/bootstrap.min.css" rel="stylesheet"> -->
+        <link href="<?php echo $patient_static_file; ?>/assets/css/material.css" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="assets/css/sb-admin.css" rel="stylesheet">
+        <link href="<?php echo $patient_static_file; ?>/assets/css/sb-admin.css" rel="stylesheet">
         <!-- Datepicker -->
-        <link href="assets/css/date/bootstrap-datepicker3.css" rel="stylesheet">
+        <link href="<?php echo $patient_static_file; ?>/assets/css/date/bootstrap-datepicker3.css" rel="stylesheet">
         <!-- Custom Fonts -->
-        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
         
     </head>
     <body>
@@ -501,14 +503,14 @@ echo mysql_error();
         <!-- /#wrapper end -->
 
         <!-- jQuery -->
-        <script src="assets/js/jquery.js"></script>
+        <script src="<?php echo $patient_static_file; ?>/assets/js/jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo $patient_static_file; ?>/assets/js/bootstrap.min.js"></script>
         <!-- datepicker script -->
-        <script src="assets/js/date/bootstrap-datepicker.js"></script>
-        <script src="assets/js/date/moment.js"></script>
-        <script src="assets/js/date/transition.js"></script>
-        <script src="assets/js/date/collapse.js"></script>
+        <script src="<?php echo $patient_static_file; ?>/assets/js/date/bootstrap-datepicker.js"></script>
+        <script src="<?php echo $patient_static_file; ?>/assets/js/date/moment.js"></script>
+        <script src="<?php echo $patient_static_file; ?>/assets/js/date/transition.js"></script>
+        <script src="<?php echo $patient_static_file; ?>/assets/js/date/collapse.js"></script>
 
         <!-- script for datepicker start -->
         <script>
