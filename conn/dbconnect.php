@@ -46,7 +46,7 @@
 ?>
 <?php
 // $con = mysqli_connect("wecare.cpiaim2o6zs2.us-east-1.rds.amazonaws.com","admin","adminadmin","wecaredb");
-$con = mysqli_connect("wecare-prod.cpiaim2o6zs2.us-east-1.rds.amazonaws.com","admin","adminadmin","wecaredb");
+$con = mysqli_connect("wecaredb.cpiaim2o6zs2.us-east-1.rds.amazonaws.com","admin","adminadmin","wecaredb");
 
 
 // Check connection
