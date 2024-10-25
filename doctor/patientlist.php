@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once '../conn/dbconnect.php';
+include_once '../conn/static_source.php';
 // include_once 'connection/server.php';
 if(!isset($_SESSION['doctorSession']))
 {
@@ -31,7 +32,8 @@ $userRow=mysqli_fetch_array($res,MYSQLI_ASSOC);
         <link href="<?php echo $doctor_static_file; ?>/assets/css/sb-admin.css" rel="stylesheet">
         <link href="<?php echo $doctor_static_file; ?>/assets/css/time/bootstrap-clockpicker.css" rel="stylesheet">
         <link href="<?php echo $doctor_static_file; ?>/assets/css/style.css" rel="stylesheet">
-        <link href="<?php echo $doctor_static_file; ?>/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
         <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
         <!-- Custom Fonts -->
     </head>
