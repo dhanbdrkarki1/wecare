@@ -1,6 +1,9 @@
 <?php
 include_once 'conn/dbconnect.php';
 // include_once 'assets/conn/server.php';
+
+// base URL for the S3 bucket
+$s3_base_url = "https://wecare-us-east-1.s3.us-east-1.amazonaws.com";
 ?>
 
 
@@ -108,7 +111,7 @@ alert('User already registered. Please try again');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img alt="Brand" src="assets/img/logo.png" height="40px"></a>
+                    <a class="navbar-brand" href="index.php"><img alt="Brand" src="<?php echo $s3_base_url; ?>/assets/img/logo.png" height="40px"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
