@@ -25,7 +25,7 @@ $userRow=mysqli_fetch_array($res,MYSQLI_ASSOC);
         <meta name="author" content="">
         <title>Welcome Dr <?php echo $userRow['doctorFirstName'];?> <?php echo $userRow['doctorLastName'];?></title>
         <!-- Bootstrap Core CSS -->
-        <!-- <link href="<?php echo $doctor_static_file; ?>/assets/css/bootstrap.css" rel="stylesheet"> -->
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/bootstrap.css" rel="stylesheet">
         <link href="<?php echo $doctor_static_file; ?>/assets/css/material.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link href="<?php echo $doctor_static_file; ?>/assets/css/sb-admin.css" rel="stylesheet">
