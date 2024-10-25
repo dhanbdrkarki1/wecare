@@ -25,13 +25,13 @@ $userRow=mysqli_fetch_array($res,MYSQLI_ASSOC);
         <meta name="author" content="">
         <title>Welcome Dr <?php echo $userRow['doctorFirstName'];?> <?php echo $userRow['doctorLastName'];?></title>
         <!-- Bootstrap Core CSS -->
-        <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
-        <link href="assets/css/material.css" rel="stylesheet">
+        <!-- <link href="<?php echo $doctor_static_file; ?>/assets/css/bootstrap.css" rel="stylesheet"> -->
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/material.css" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="assets/css/sb-admin.css" rel="stylesheet">
-        <link href="assets/css/time/bootstrap-clockpicker.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/sb-admin.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/time/bootstrap-clockpicker.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/style.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
         <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
         <!-- Custom Fonts -->
     </head>
@@ -185,7 +185,7 @@ $userRow=mysqli_fetch_array($res,MYSQLI_ASSOC);
 
        
         <!-- jQuery -->
-        <script src="../patient/assets/js/jquery.js"></script>
+        <script src="../patient/<?php echo $doctor_static_file; ?>/assets/js/jquery.js"></script>
         <script type="text/javascript">
 $(function() {
 $(".delete").click(function(){
@@ -256,8 +256,8 @@ return false;
         </script>
         
         <!-- Bootstrap Core JavaScript -->
-        <script src="../patient/assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/bootstrap-clockpicker.js"></script>
+        <script src="<?php echo $doctor_static_file; ?>/assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo $doctor_static_file; ?>/assets/js/bootstrap-clockpicker.js"></script>
         <!-- Latest compiled and minified JavaScript -->
          <!-- script for jquery datatable start-->
         <!-- Include Date Range Picker -->

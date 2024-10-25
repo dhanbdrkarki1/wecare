@@ -1,6 +1,8 @@
 <?php
 session_start();
 include_once '../conn/dbconnect.php';
+// base URL for the S3 bucket
+include_once '../conn/static_source.php';
 // include_once 'connection/server.php';
 if(!isset($_SESSION['doctorSession']))
 {
@@ -23,12 +25,13 @@ $userRow=mysqli_fetch_array($res,MYSQLI_ASSOC);
         <meta name="author" content="">
         <title>Welcome Dr <?php echo $userRow['doctorFirstName'];?> <?php echo $userRow['doctorLastName'];?></title>
         <!-- Bootstrap Core CSS -->
-        <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
-        <link href="assets/css/material.css" rel="stylesheet">
+        <!-- <link href="<?php echo $doctor_static_file; ?>/assets/css/bootstrap.css" rel="stylesheet"> -->
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/material.css" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="assets/css/sb-admin.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/sb-admin.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
         <!-- Custom Fonts -->
     </head>
     <body>
@@ -217,7 +220,7 @@ function chkit(uid, chk) {
 
        
         <!-- jQuery -->
-        <script src="../patient/assets/js/jquery.js"></script>
+        <script src="<?php echo $doctor_static_file; ?>/assets/js/jquery.js"></script>
         <script type="text/javascript">
 $(function() {
 $(".delete").click(function(){
@@ -240,7 +243,7 @@ return false;
 });
 </script>
         <!-- Bootstrap Core JavaScript -->
-        <script src="../patient/assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo $doctor_static_file; ?>/assets/js/bootstrap.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
          <!-- script for jquery datatable start-->
         <script type="text/javascript">

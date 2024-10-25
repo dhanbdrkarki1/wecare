@@ -1,6 +1,8 @@
 <?php
 session_start();
 include_once '../conn/dbconnect.php';
+// base URL for the S3 bucket
+include_once '../conn/static_source.php';
 // include_once 'connection/server.php';
 if(!isset($_SESSION['doctorSession']))
 {
@@ -41,13 +43,13 @@ header( 'Location: doctorprofile.php' ) ;
         <meta name="author" content="">
         <title>Welcome Dr <?php echo $userRow['doctorFirstName'];?> <?php echo $userRow['doctorLastName'];?></title>
         <!-- Bootstrap Core CSS -->
-        <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
-        <link href="assets/css/material.css" rel="stylesheet">
+        <!-- <link href="<?php echo $doctor_static_file; ?>/assets/css/bootstrap.css" rel="stylesheet"> -->
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/material.css" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="assets/css/sb-admin.css" rel="stylesheet">
-        <link href="assets/css/time/bootstrap-clockpicker.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/sb-admin.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/time/bootstrap-clockpicker.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/css/style.css" rel="stylesheet">
+        <link href="<?php echo $doctor_static_file; ?>/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
         <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
         <!-- Custom Fonts -->
     </head>
@@ -140,7 +142,7 @@ header( 'Location: doctorprofile.php' ) ;
                         <div class="col-md-3 col-sm-3">
                             
                             <div class="user-wrapper">
-                                <img src="assets/img/1.jpg" class="img-responsive" />
+                                <img src="<?php echo $doctor_static_file; ?>/assets/img/1.jpg" class="img-responsive" />
                                 <div class="description">
                                     <h4><?php echo $userRow['doctorFirstName']; ?> <?php echo $userRow['doctorLastName']; ?></h4>
                                     <h5> <strong> Doctor </strong></h5>
@@ -281,11 +283,11 @@ header( 'Location: doctorprofile.php' ) ;
 
        
         <!-- jQuery -->
-        <script src="../patient/assets/js/jquery.js"></script>
+        <script src="<?php echo $doctor_static_file; ?>/assets/js/jquery.js"></script>
         
         <!-- Bootstrap Core JavaScript -->
-        <script src="../patient/assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/bootstrap-clockpicker.js"></script>
+        <script src="<?php echo $doctor_static_file; ?>/assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo $doctor_static_file; ?>/assets/js/bootstrap-clockpicker.js"></script>
         <!-- Latest compiled and minified JavaScript -->
          <!-- script for jquery datatable start-->
         <!-- Include Date Range Picker -->
