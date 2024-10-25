@@ -2,7 +2,7 @@
 session_start();
 // include_once '../connection/server.php';
 
-include_once '../assets/conn/dbconnect.php';
+include_once '../conn/dbconnect.php';
 
 if(!isset($_SESSION['patientSession']))
 {

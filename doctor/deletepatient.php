@@ -1,5 +1,5 @@
 <?php
-include_once '../assets/conn/dbconnect.php';
+include_once '../conn/dbconnect.php';
 // Get the variables.
 $icPatient = $_POST['ic'];
 // echo $appid;

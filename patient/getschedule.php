@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../assets/conn/dbconnect.php';
+include_once '../conn/dbconnect.php';
 $q = $_GET['q'];
 $res = mysqli_query($con,"SELECT * FROM doctorschedule WHERE scheduleDate='$q'");
 if (!$res) {

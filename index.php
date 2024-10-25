@@ -1,5 +1,5 @@
 <?php
-include_once 'assets/conn/dbconnect.php';
+include_once 'conn/dbconnect.php';
 // include_once 'assets/conn/server.php';
 ?>
 

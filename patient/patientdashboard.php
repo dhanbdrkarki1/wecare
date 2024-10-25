@@ -3,7 +3,7 @@
 session_destroy();
 session_unset();
 // include_once '../connection/server.php';
-include_once '../assets/conn/dbconnect.php';
+include_once '../conn/dbconnect.php';
 if(!isset($_SESSION['patientSession']))
 {
 header("Location: ../index.php");

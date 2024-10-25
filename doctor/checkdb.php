@@ -1,5 +1,5 @@
 <?php
-include_once '../assets/conn/dbconnect.php';
+include_once '../conn/dbconnect.php';
 // Get the variables.
 $userid = $_GET['userid'];
 $chkYesNo = $_GET['chkYesNo'];
