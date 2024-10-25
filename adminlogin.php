@@ -1,6 +1,7 @@
 <?php
 include_once 'conn/dbconnect.php';
-
+// base URL for the S3 bucket
+include_once 'conn/static_source.php';
 session_start();
 if (isset($_SESSION['doctorSession']) != "") {
 header("Location: doctor/doctordashboard.php");
@@ -41,8 +42,8 @@ header("Location: doctor/doctordashboard.php");
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Clinic Appointment Application</title>
         <!-- Bootstrap -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="<?php echo $s3_base_url; ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo $s3_base_url; ?>/assets/css/style.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
@@ -61,7 +62,7 @@ header("Location: doctor/doctordashboard.php");
             <!-- end -->
         </div>
 
-        <script src="assets/js/jquery.js"></script>
+        <script src="<?php echo $s3_base_url; ?>/assets/js/jquery.js"></script>
 
         <!-- js start -->
         

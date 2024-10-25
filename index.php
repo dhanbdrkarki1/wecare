@@ -3,7 +3,7 @@ include_once 'conn/dbconnect.php';
 // include_once 'assets/conn/server.php';
 
 // base URL for the S3 bucket
-$s3_base_url = "https://wecare-us-east-1.s3.us-east-1.amazonaws.com";
+include_once 'conn/static_source.php';
 ?>
 
 
@@ -465,13 +465,13 @@ alert('User already registered. Please try again');
         <!-- footer end -->
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/date/bootstrap-datepicker.js"></script>
-    <script src="assets/js/moment.js"></script>
-    <script src="assets/js/transition.js"></script>
-    <script src="assets/js/collapse.js"></script>
+    <script src="<?php echo $s3_base_url; ?>/assets/js/jquery.js"></script>
+    <script src="<?php echo $s3_base_url; ?>/assets/js/date/bootstrap-datepicker.js"></script>
+    <script src="<?php echo $s3_base_url; ?>/assets/js/moment.js"></script>
+    <script src="<?php echo $s3_base_url; ?>/assets/js/transition.js"></script>
+    <script src="<?php echo $s3_base_url; ?>/assets/js/collapse.js"></script>
      <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $s3_base_url; ?>/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript">
     $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').focus()
