@@ -326,7 +326,7 @@ alert('Added fail. Please try again.');
                                     echo "<td>" . $doctorschedule['endTime'] . "</td>";
                                     echo "<td>" . $doctorschedule['bookAvail'] . "</td>";
                                     echo "<form method='POST'>";
-                                    echo "<td class='text-center'><a href='#' id='".$doctorschedule['scheduleId']."' class='delete'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>
+                                    echo "<td class='text-center'><a href='#' id='".$doctorschedule['scheduleId']."' class='delete'><i class='fa fa-trash'></i></a>
                             </td>";
                                
                             } 

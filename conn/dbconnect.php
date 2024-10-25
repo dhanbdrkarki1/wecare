@@ -45,7 +45,9 @@
 //   }
 ?>
 <?php
-$con = mysqli_connect("wecare.cpiaim2o6zs2.us-east-1.rds.amazonaws.com","admin","adminadmin","wecaredb");
+// $con = mysqli_connect("wecare.cpiaim2o6zs2.us-east-1.rds.amazonaws.com","admin","adminadmin","wecaredb");
+$con = mysqli_connect("localhost","root","","wecaredb");
+
 
 // Check connection
 if (mysqli_connect_errno())

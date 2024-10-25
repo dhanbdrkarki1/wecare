@@ -159,7 +159,7 @@ $userRow=mysqli_fetch_array($res,MYSQLI_ASSOC);
                                     echo "<td>" . $patientRow['patientDOB'] . "</td>";
                                     echo "<td>" . $patientRow['patientAddress'] . "</td>";
                                     echo "<form method='POST'>";
-                                    echo "<td class='text-center'><a href='#' id='".$patientRow['icPatient']."' class='delete'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>
+                                    echo "<td class='text-center'><a href='#' id='".$patientRow['icPatient']."' class='delete'><i class='fa fa-trash'></i></a>
                             </td>";
                                
                             } 
