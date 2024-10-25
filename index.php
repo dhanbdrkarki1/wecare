@@ -87,17 +87,17 @@ alert('User already registered. Please try again');
         <title>Clinic Appointment Application</title>
         <!-- Bootstrap -->
         <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/css/style1.css" rel="stylesheet">
-        <link href="assets/css/blocks.css" rel="stylesheet">
-        <link href="assets/css/date/bootstrap-datepicker.css" rel="stylesheet">
-        <link href="assets/css/date/bootstrap-datepicker3.css" rel="stylesheet">
+        <link href="<?php echo $s3_base_url; ?>/assets/css/style.css" rel="stylesheet">
+        <link href="<?php echo $s3_base_url; ?>/assets/css/style1.css" rel="stylesheet">
+        <link href="<?php echo $s3_base_url; ?>/assets/css/blocks.css" rel="stylesheet">
+        <link href="<?php echo $s3_base_url; ?>/assets/css/date/bootstrap-datepicker.css" rel="stylesheet">
+        <link href="<?php echo $s3_base_url; ?>/assets/css/date/bootstrap-datepicker3.css" rel="stylesheet">
         <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
         <!-- <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />  -->
 
         <!--Font Awesome (added because you use icons in your prepend/append)-->
         <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
-        <link href="assets/css/material.css" rel="stylesheet">
+        <link href="<?php echo $s3_base_url; ?>/assets/css/material.css" rel="stylesheet">
     </head>
     <body>
         <!-- navigation -->
