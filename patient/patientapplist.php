@@ -1,6 +1,9 @@
 <?php
 session_start();
 include_once '../conn/dbconnect.php';
+// base URL for the S3 bucket
+include_once '../conn/static_source.php';
+
 $session=$_SESSION[ 'patientSession'];
 $res=mysqli_query($con, "SELECT a.*, b.*,c.* FROM patient a
 	JOIN appointment b
@@ -122,7 +125,7 @@ echo "<td>" . $userRow['scheduleDay'] . "</td>";
 echo "<td>" . $userRow['scheduleDate'] . "</td>";
 echo "<td>" . $userRow['startTime'] . "</td>";
 echo "<td>" . $userRow['endTime'] . "</td>";
-echo "<td><a href='invoice.php?appid=".$userRow['appId']."' target='_blank'><span class='glyphicon glyphicon-print' aria-hidden='true'></span></a> </td>";
+echo "<td><a href='invoice.php?appid=".$userRow['appId']."' target='_blank'><i class='fa fa-print'></i></a> </td>";
 }
 
 echo "</tr>";
