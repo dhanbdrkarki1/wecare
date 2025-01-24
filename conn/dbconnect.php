@@ -14,16 +14,16 @@
 //      define('_DATABASE_NAME','db_healthcare');
 //      define('_DATABASE_USER_NAME','root');
 //      define('_DATABASE_PASSWORD','');
- 
+
 //      $MySQLiconn = new MySQLi(_HOST_NAME,_DATABASE_USER_NAME,_DATABASE_PASSWORD,_DATABASE_NAME);
-  
+
 //      if($MySQLiconn->connect_errno)
 //      {
 //        die("ERROR : -> ".$MySQLiconn->connect_error);
 //      }
 // ?>
 <!-- mysql -->
- <?php 
+<?php
 // if(!mysql_connect("mysql.hostinger.my","u346953953_admin","database123"))
 // {
 //      die('oops connection problem ! --> '.mysql_error());
@@ -46,12 +46,11 @@
 ?>
 <?php
 // $con = mysqli_connect("wecare.cpiaim2o6zs2.us-east-1.rds.amazonaws.com","admin","adminadmin","wecaredb");
-$con = mysqli_connect("wecaredb.cpiaim2o6zs2.us-east-1.rds.amazonaws.com","admin","adminadmin","wecaredb");
+$con = mysqli_connect("database-1.cvg8yyg0it3z.us-east-2.rds.amazonaws.com", "admin", "adminadmin", "dhandb");
 
 
 // Check connection
-if (mysqli_connect_errno())
-  {
+if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+}
 ?>
